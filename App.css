@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+  --main-color: #0ed3d3;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  
+  
+}
+html{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+body::-webkit-scrollbar{
+  width: 10px;
+  background-color: #222;
+} 
+body::-webkit-scrollbar-thumb{
+  width: 10px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
+
+img{
+  width: 100%;
+}
+a{
+  text-decoration: none;
+}
+.section-padding{
+  padding: 80px 0 ;
+}
+.section-title{
+  margin-bottom: 50px;
+}
+
+.section-title h2 span{
+  color: var(--main-color);
+}
+li{
+  list-style: none;
+}
+
+
+.content{
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
+  transform: translateX(-110px);
+  -webkit-transform: translateX(-110px);
+  -moz-transform: translateX(-110px);
+  -ms-transform: translateX(-110px);
+  -o-transform: translateX(-110px);
+}
+.content h2{
+  text-align: center;
+}
+.content span{
+  text-align: center;
+}
+
+.content span:nth-child(1){  
+  color: #000000;
+  margin-right: 10px;
+  
+}
+.content span:nth-child(2){
+  position: absolute;  
+  color: #fff;
+  color: transparent;
+  -webkit-text-stroke: 2px #0ce4d770;
+}
+.content span:nth-child(3){
+  position: absolute;    
+  color: #fff;
+  color: var(--main-color);
+  animation: animate 4s ease-in-out infinite;
+}
+@keyframes animate{
+  0%,100%{
+      clip-path: polygon(0 23%, 22% 37%, 47% 50%, 72% 38%, 100% 50%, 100% 99%, 0% 98%);
+
+  }
+  50%{
+      clip-path: polygon(0% 48%, 25% 65%, 55% 54%, 83% 67%, 100% 46%, 100% 100%, 0% 99%);
+  }
+}
+
+
+
+@media screen and (max-width: 768px){
+  .content{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    transform: translateX(-50px);
+}
+  .section-padding{
+    padding:100px 0 0;
+  }
+  .section-title{
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 575px){
+  .content{
+    font-size: 25px;
+    transform: translateX(-60px);
+    -webkit-transform: translateX(-60px);
+    -moz-transform: translateX(-60px);
+    -ms-transform: translateX(-60px);
+    -o-transform: translateX(-60px);
+}
+  .section-padding{
+    padding:90px 0 0;
+  }
+  .section-title{
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 350px){
+  .content{
+    transform: translateX(-60px);
+    -webkit-transform: translateX(-65px);
+    margin: auto;
+}
+  .section-title{
+    margin-bottom: 40px;
+  }
+}

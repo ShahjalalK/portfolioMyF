@@ -1,0 +1,107 @@
+.experience{
+    background-color: #f9f9f9;
+}
+.items{
+    height: auto;
+    box-shadow: 2px 2px 22px rgb(0 0 0 / 40%);
+    border-radius: 8px;
+    margin-top: 2rem;
+    position: relative;
+    transition: box-shadow .4s;
+    transition: all .5s ease 0s;
+    padding: 0.5rem 0;
+}
+.items .item{
+    background: linear-gradient( -30deg,#000 45%,#141414 0);
+    padding: 1rem;    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.items .title{
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.items .title h1{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.items .title img{
+    margin-left: 10px;
+    vertical-align: middle;
+    width: 30px;
+    animation: rotate-vert-center 5s  infinite ;
+    -webkit-animation: rotate-vert-center 5s  infinite ;
+}
+@keyframes rotate-vert-center {
+    0%, 100% {
+        transform: rotateY(360deg);
+        -webkit-transform: rotateY(360deg);
+        -moz-transform: rotateY(360deg);
+        -ms-transform: rotateY(360deg);
+        -o-transform: rotateY(360deg);
+}
+    50%{
+        transform: rotateX(0deg);
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        -ms-transform: rotateX(0deg);
+        -o-transform: rotateX(0deg);
+}
+}
+.item .percent{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+}
+.item .percent svg{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+.item .percent svg circle{
+    width: 200px;
+    height: 200px;
+    fill: #222;
+    stroke: #000;
+    transform: translate(25px , 25px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    border-radius: 30px;
+}
+.item .percent svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: #000;
+    stroke-width: 8;
+}
+.item .percent svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 70) / 100);
+    stroke: blueviolet;
+    stroke-width: 12;
+}
+.item .percent .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item .percent .number h2{
+    font-size: 24px; 
+    color: #fff;   
+}
+
+@media screen and (max-width: 768px){
+    
+}

@@ -1,0 +1,261 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,700;1,700&display=swap');
+nav{
+    background: #100f10 !important;
+    transition: all 0.3s ease;    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+nav::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+.navbars.navbars-shirnk{
+    box-shadow: 0 5px 10px var(--main-color);
+}
+.navbar-inner{    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-inner .logo{
+    margin-top: 10px;
+    text-align: center;
+   
+}
+.navbar-inner .logo .react-reveal:nth-child(1){
+    animation-delay: 1s !important;
+}
+
+
+
+.logo a{
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    line-height: 20px;
+    letter-spacing: 7px;
+    font-family: 'Bree Serif', serif;
+    z-index: 100;
+}
+.logo a span{
+    color: var(--main-color);
+    font-family: 'PT Serif', serif;
+    text-align: center;
+    z-index: 100;
+}
+.logo .sub-logo{
+    color: #222;
+    margin-top: 5px;
+    padding: 0 10px;
+    font-weight: 500;
+    background: #fff;
+    border-radius: 30px;
+    font-size: 14px;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-family: 'PT Serif', serif;
+    position: relative;
+    z-index: 100;
+    margin-bottom: 12px;
+}
+
+.logo .sub-logo::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    border-radius: 30px;
+    background: #0ce4d747;
+    z-index: -1;
+    animation: animateds 1s ease-in-out infinite;
+    -webkit-animation: animateds 1s ease-in-out infinite;
+    
+}
+
+@keyframes animateds {
+    0%, 100%{
+        clip-path: polygon(1% 31%, 25% 48%, 55% 35%, 84% 46%, 100% 34%, 100% 100%, 0% 99%);
+    
+    }
+    50%{
+        clip-path: polygon(1% 88%, 31% 90%, 55% 94%, 80% 86%, 100% 84%, 100% 100%, 0% 99%);
+       
+    }
+}
+
+
+
+.nav-manu{
+    animation: animated 1s; 
+}
+@keyframes animated{
+    from{
+        transform: translateX(-200px);
+}
+to{
+    transform: translateX(0px);
+}
+}
+
+.nav-manu i{
+   font-size: 25px;
+   color: #fff;
+   cursor: pointer;
+   background: transparent;
+   padding: 3px 7px; 
+
+}
+
+.nav-manu i.fa-times{
+    transition: all 0.3s ease;
+}
+.nav-manu i.fa-bars{
+    transition: all 0.3s ease;
+}
+.nav-manu{
+    transition: all 0.3s ease;
+    
+}
+.nav-manu.active{
+    border: 1px solid #66ffff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+.navbar-inner .manu{
+    position: fixed;
+    top: 60px;
+    right: -350px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    background: rgb(0 123 255 / 25%);
+    width: 350px;
+    min-height: 100%;
+    z-index: 100;
+    transition: all 0.5s ease;
+    padding: 0 10px;
+}
+.navbar-inner .manu.active{
+    right: 0;
+}
+.overflow{
+    position: fixed;
+    content: '';
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,10);
+    display: none;
+    z-index: 10;
+}
+.overflow.active{
+    display: block;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+.navbar-inner ul li{
+    margin-top: 30px;
+    
+    
+}
+.navbar-inner ul li .reActive{
+    font-size: 18px;
+    padding: 5px 10px;
+    color: #f1f1f1;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.navbar-inner ul li .reActive:hover,
+.navbar-inner ul li .active{
+    background-color: black;
+    color: var(--main-color) !important;    
+    box-shadow: 0 0 5px var(--main-color), 0 0 5px #66ffff;
+    border-radius: 5px;
+    transition: all 0.3s ease-in;
+}
+
+
+@media screen and (max-width: 991px){
+    .nav-manu i,
+    .navbar-inner .logo a{
+        font-size: 35px;
+    } 
+    .navbar-inner ul li .reActive{
+        font-size: 16px;
+    }
+   
+    
+}
+@media screen and (max-width: 768px){
+    .nav-manu i,
+    .navbar-inner .logo a{
+        font-size: 30px;
+    }
+    .navbar-inner ul li .reActive{
+        font-size: 14px;
+    }
+  
+   
+}
+@media screen and (max-width: 575px){  
+    .navbar-inner ul li .reActive{
+        font-size: 12px;
+    }
+    .navbar-inner .manu{
+        width: 180px;
+    }
+    .navbar-inner .logo .sub-logo{
+        font-size: 12px;
+        padding: 2px 6px;
+        letter-spacing: 3px;
+    }
+    
+}
+@media screen and (max-width: 350px){
+    .navbar-inner .logo .sub-logo{
+        font-size: 10px;
+    }
+    .nav-manu i,
+    .navbar-inner .logo a{
+        font-size: 22px;
+    }
+    .navbar-inner .manu{
+        top:55px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

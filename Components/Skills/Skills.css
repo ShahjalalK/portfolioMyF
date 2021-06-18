@@ -1,0 +1,92 @@
+.SkillsContainer{
+    padding: 1rem 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.SkillsContainer .sliders{
+    width: 100%;  
+    margin: auto;
+}
+
+.SkillsContainer::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: '';
+    z-index: 1;
+
+}
+.SkillsContainer::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: '';
+    z-index: 1;
+    transform: rotate(180deg);
+    
+}
+.SkillsContainer .sliders .slick-slide{
+    animation: animatedsd 1s 0.1s ease-in;
+    transition: all 0.3s ease;
+    -webkit-animation: animatedsd 1s 0.1s ease-in;
+}
+
+
+
+@keyframes animatedsd {
+    from{
+        transform: translateY(100px);
+        -webkit-transform: translateY(100px);
+        -moz-transform: translateY(100px);
+        -ms-transform: translateY(100px);
+        -o-transform: translateY(100px);
+}
+    to{
+        transform: translateY(0px);
+}
+}
+
+.SkillsContainer img{
+    width: 70px;
+    height: auto;
+    text-align: center;
+   
+}
+@media screen and (max-width: 1200px){
+    .SkillsContainer .sliders{
+        width: 90%;  
+        margin: auto;
+    }
+}
+@media screen and (max-width: 960px){
+    .SkillsContainer img{
+        width: 60px;       
+    }   
+}
+@media screen and (max-width: 768px){
+    .SkillsContainer img{
+        width: 50px;
+       
+    }
+    .SkillsContainer .sliders{
+        width: 90%;  
+        margin: auto;
+    }
+}
+@media screen and (max-width: 557px){
+    .SkillsContainer img{
+        width: 40px;
+    }
+    .SkillsContainer .sliders{
+        width: 80%;  
+        margin: auto;
+    }
+}

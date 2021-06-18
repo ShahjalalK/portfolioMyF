@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap');
+
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.hero #particles-js{
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    align-items: center;
+}
+.hero img{
+    width: 100%;
+    height: 100vh;
+}
+.carousel-caption{
+    bottom: 150px;
+    width: 70%;
+    padding: 10px 50px;
+    z-index: 1;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+.carousel {
+    position: relative;
+}
+.hero ::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: rgba(0,0,0,0.4);
+    border-radius: 5px;
+    z-index: -1;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.carousel-caption h3{
+    font-size: 40px;
+    text-shadow: 0 0 5px var(--main-color);
+    margin-bottom: 30px;
+}
+.carousel-caption p{
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.btn{
+    border: 1px solid var(--main-color) ;
+    background: none;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.5s;
+    position: relative;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: var(--main-color);
+    transition: 0.5s;
+    z-index: -1;
+}
+.btn::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+}
+.btn:hover::before{
+    height: 100%;
+}
+.btn a{
+    color: var(--main-color);
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+.btn:hover a{
+    color: #fff;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1200px){
+    .carousel-caption{
+        bottom: 500px;
+    }
+    .carousel-caption h3{
+        font-size: 34px;
+    }
+    .carousel-caption p{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 768px){
+    .carousel-caption{
+        bottom: 250px;
+    }
+    .carousel-caption h3{
+        font-size: 23px;
+        margin-bottom: 25px;
+    }
+    .carousel-caption p{
+        line-height: 25px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 557px){
+    .carousel-caption{
+        bottom: 100px;
+    }
+    .carousel-caption h3{
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .carousel-caption p{
+        line-height: 20px;
+        font-size: 12px;
+    }
+    .btn{
+        padding: 5px 15px;
+    }
+    .btn a{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 350px){
+    .carousel-caption{
+        bottom: 50px;
+    }
+    .carousel-caption h3{
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    .carousel-caption p{
+        line-height: 18px;
+        font-size: 10px;
+    }
+    .carousel-caption .btn{
+        padding: 3px 10px ;
+    }
+    .carousel-caption .btn a{
+        font-size: 8px;
+        margin-bottom: 5px;
+    }
+}
+
+.carousel-control-prev{
+    display: none;
+}
+.carousel-control-next{
+    display: none;
+}

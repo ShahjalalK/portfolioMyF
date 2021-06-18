@@ -1,0 +1,190 @@
+.project{
+    background-color: #eceaea;
+}
+
+.mTop{
+    margin-top: 2rem;
+}
+.singlePContainer {
+    background: linear-gradient(-30deg,#000 45%,#181818 0);
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 1px 1px 10px rgb(0 0 0 / 50%);
+    transition: all .8s;
+    padding-bottom: .1rem;
+}
+.singlePContainer img {
+    width: 100%;
+    height: 15rem;
+    border-radius: 6px 6px 0 0;
+    -webkit-clip-path: polygon(0 0,100% 0,100% 80%,50% 100%,0 80%);
+    clip-path: polygon(0 0,100% 0,100% 80%,50% 100%,0 80%);
+    margin: auto;
+}
+.singlePContainerBody h1 {
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1.4px;
+    padding: 1rem 0 0;
+    margin: 0.5rem 5rem;
+    box-shadow: 1px 1px 10px rgb(0 0 0 / 40%);
+    text-shadow: 1px 1px 10px rgb(0 0 0 / 40%);
+    font-weight: 600;
+    border-bottom: .1px solid #fff;
+    font-size: 25px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.wrapper button{
+    position: relative;
+    padding: 5px 30px;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    z-index: 100;
+}
+.wrapper button:hover{
+    color: #222;
+}
+
+.wrapper button::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    content: '';
+    background-color: #fff;
+    z-index: -1;
+    transition: all 0.3s ease-in;
+}
+.wrapper button:hover:before{
+    height: 100%;
+}
+
+.modal.show .modal-dialog{
+    margin-top: 150px;
+}
+.modal-body{
+    padding: 0;
+}
+.modal-body img{
+    width: 100%;
+    height: 100%;
+}
+.modal-body{
+    background: linear-gradient(-30deg,#000 52%,#121212 0);
+    
+}
+.modal-body .body-text{
+    padding: 15px;
+    color: #fff;
+    margin-top: 50px;
+    position: relative;
+}
+.modal-body .body-text h1{
+    font-size: 25px;
+    border-bottom: 4px solid hsla(0,0%,100%,.7);
+    padding-bottom: 5px;
+}
+.modal-body .body-text p{
+    margin-top: 2.2rem;
+    color: hsla(0,0%,100%,.7);
+    letter-spacing: 3px;
+    line-height: 28px;
+}
+.modal-body .right-side{
+    position: relative;
+}
+.modal-body .times{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-50px, 20px);
+    cursor: pointer;
+    color: #fff;
+    font-size: 25px;
+    -webkit-transform: translate(-50px, 20px);
+    -moz-transform: translate(-50px, 20px);
+    -ms-transform: translate(-50px, 20px);
+    -o-transform: translate(-50px, 20px);
+}
+
+.body-text #button-6{
+    padding: 5px 25px;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    transition: all 0.5s ease-in;
+    position: relative;
+}
+.body-text #button-6 .spin{
+    width: 0;
+    height: 0;
+    opacity: 0;
+    left: 70px;
+    top: 20px;
+    transform: rotate(0deg);
+    background: none;
+    position: absolute;
+    background: #ccc;
+    transition: all .3s ease-Out;
+    z-index: -1;
+}
+.body-text #button-6:hover .spin{
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   opacity: 1;
+   transform: rotate(180deg);
+   -webkit-transform: rotate(180deg);
+   -moz-transform: rotate(180deg);
+   -ms-transform: rotate(180deg);
+   -o-transform: rotate(180deg);
+}
+.body-text #button-6 a{
+    font-size: 22px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+   
+}
+.body-text #button-6:hover{
+    background-color: #fff;
+    z-index: 100;
+    transition: all 0.5s ease-in;    
+}
+.body-text #button-6:hover a{
+    color: #181818;
+}
+
+
+
+
+@media screen and (max-width: 1200px){
+    .singlePContainerBody h1{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 557px){
+    .singlePContainerBody h1{
+        font-size: 18px;
+    }
+    .wrapper button{
+        font-size: 16px;
+    }
+}
